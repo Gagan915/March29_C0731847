@@ -28,13 +28,16 @@ namespace ConsoleApp1
         }
         class Network
         {
-            ArrayList WebPageContents = new ArrayList();
+           static  ArrayList WebPageContents = new ArrayList();
             public static  async Task  Download()
             {
                 HttpClient client = new HttpClient();
                 var data = await client.GetStringAsync("http://torontopubliclibrary.com");
-                // Console.WriteLine(data);
-                foreach (String line in data) ;
+               // Console.WriteLine(data);
+               foreach (var i in data)
+                {
+                    WebPageContents.Add(i);
+                }
 
             }
         }
