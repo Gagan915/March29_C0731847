@@ -21,6 +21,8 @@ namespace ConsoleApp1
 
         static void Download()
         {
+            await Network.Download();
+        }
             Task.Run(() =>
             {
                 Thread.Sleep(3000);
@@ -30,7 +32,7 @@ namespace ConsoleApp1
             Thread.Sleep(3000);
             Console.WriteLine("Download complete");
         }
-        //
+       class
     }
 }
 
