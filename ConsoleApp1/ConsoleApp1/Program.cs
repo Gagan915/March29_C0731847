@@ -27,6 +27,8 @@ namespace ConsoleApp1
                 Console.WriteLine("Download complete");
                 Thread.Sleep(7000);
             });
+            Thread.Sleep(3000);
+            Console.WriteLine("Download complete");
         }
         //
     }
