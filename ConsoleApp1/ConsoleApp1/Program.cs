@@ -19,20 +19,22 @@ namespace ConsoleApp1
         }
 
 
-        static void Download()
+        static async void Download()
         {
             await Network.Download();
+            Console.WriteLine("Download Complete");
         }
-            Task.Run(() =>
+        class Network
+        {
+            public static Task Download()
             {
-                Thread.Sleep(3000);
-                Console.WriteLine("Download complete");
-                Thread.Sleep(7000);
-            });
-            Thread.Sleep(3000);
-            Console.WriteLine("Download complete");
+                {
+                    return
+
+                    Task.Run(
+                        () => Thread.Sleep(3000));
+                }
+            }
         }
-       class
     }
 }
-
