@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
@@ -27,12 +28,13 @@ namespace ConsoleApp1
         }
         class Network
         {
-
+            ArrayList WebPageContents = new ArrayList();
             public static  async Task  Download()
             {
                 HttpClient client = new HttpClient();
                 var data = await client.GetStringAsync("http://torontopubliclibrary.com");
-                Console.WriteLine(data);
+                // Console.WriteLine(data);
+                foreach (String line in data) ;
 
             }
         }
